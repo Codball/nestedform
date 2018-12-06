@@ -1,0 +1,5 @@
+<h1>Edit Siteinfo</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.siteinfo_path(@conn, :update, @siteinfo)) %>
+
+<span><%= link "Back", to: Routes.siteinfo_path(@conn, :index) %></span>

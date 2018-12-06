@@ -1,0 +1,43 @@
+<h1>Show Siteinfo</h1>
+
+<ul>
+
+  <li>
+    <strong>Store number:</strong>
+    <%= @siteinfo.store_number %>
+  </li>
+
+  <li>
+    <strong>Acronym:</strong>
+    <%= @siteinfo.acronym %>
+  </li>
+
+  <li>
+    <strong>Sales contact:</strong>
+    <%= @siteinfo.sales_contact %>
+  </li>
+
+  <li>
+    <strong>Service tech:</strong>
+    <%= @siteinfo.service_tech %>
+  </li>
+
+  <li>
+    <strong>Facilities manager:</strong>
+    <%= @siteinfo.facilities_manager %>
+  </li>
+
+  <li>
+    <strong>Street address:</strong>
+    <%= @siteinfo.street_address %>
+  </li>
+
+  <li>
+    <strong>Zip:</strong>
+    <%= @siteinfo.zip %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.siteinfo_path(@conn, :edit, @siteinfo) %></span>
+<span><%= link "Back", to: Routes.siteinfo_path(@conn, :index) %></span>

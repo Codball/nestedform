@@ -1,0 +1,31 @@
+<tr>
+  <td>
+    <%= text_input @d, :store_number, class: "form-control" %>
+    <%= error_tag @d, :store_number %>
+  </td>
+  <td>
+    <%= text_input @d, :acronym, class: "form-control" %>
+    <%= error_tag @d, :acronym %>
+  </td>
+  <td>
+    <%= text_input @d, :sales_contact, class: "form-control" %>
+    <%= error_tag @d, :sales_contact %>
+  </td>
+  <td>
+    <%= text_input @d, :service_tech, class: "form-control" %>
+    <%= error_tag @d, :service_tech %>
+  </td>
+  <td>
+    <%= text_input @d, :facilities_manager, class: "form-control" %>
+    <%= error_tag @d, :facilities_manager %>
+  </td>
+  <td>
+    <%= text_input @d, :street_address, class: "form-control" %>
+    <%= error_tag @d, :street_address %>
+  </td>
+  <td>
+    <%= text_input @d, :zip, class: "form-control" %>
+    <%= error_tag @d, :zip %>
+  </td>
+ 
+</tr>

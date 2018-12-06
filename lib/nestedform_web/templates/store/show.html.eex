@@ -1,0 +1,23 @@
+<h1>Show Store</h1>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @store.name %>
+  </li>
+
+  <li>
+    <strong>State:</strong>
+    <%= @store.state %>
+  </li>
+
+  <li>
+    <strong>City:</strong>
+    <%= @store.city %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.store_path(@conn, :edit, @store) %></span>
+<span><%= link "Back", to: Routes.store_path(@conn, :index) %></span>

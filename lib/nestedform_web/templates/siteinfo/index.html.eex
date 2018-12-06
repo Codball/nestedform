@@ -1,0 +1,38 @@
+<h1>Listing Siteinfo</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Store number</th>
+      <th>Acronym</th>
+      <th>Sales contact</th>
+      <th>Service tech</th>
+      <th>Facilities manager</th>
+      <th>Street address</th>
+      <th>Zip</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for siteinfo <- @siteinfo do %>
+    <tr>
+      <td><%= siteinfo.store_number %></td>
+      <td><%= siteinfo.acronym %></td>
+      <td><%= siteinfo.sales_contact %></td>
+      <td><%= siteinfo.service_tech %></td>
+      <td><%= siteinfo.facilities_manager %></td>
+      <td><%= siteinfo.street_address %></td>
+      <td><%= siteinfo.zip %></td>
+
+      <td>
+        <%= link "Show", to: Routes.siteinfo_path(@conn, :show, siteinfo) %>
+        <%= link "Edit", to: Routes.siteinfo_path(@conn, :edit, siteinfo) %>
+        <%= link "Delete", to: Routes.siteinfo_path(@conn, :delete, siteinfo), method: :delete, data: [confirm: "Are you sure?"] %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Siteinfo", to: Routes.siteinfo_path(@conn, :new) %></span>
