@@ -16,6 +16,8 @@ defmodule NestedformWeb.Router do
   scope "/", NestedformWeb do
     pipe_through :browser
 
+    resources "/siteinfo", SiteinfoController
+    resources "/stores", StoreController
     get "/", PageController, :index
   end
 

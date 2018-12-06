@@ -2,6 +2,7 @@ defmodule Nestedform.Stores.Store do
   use Ecto.Schema
   import Ecto.Changeset
 
+  alias Nestedform.Stores.Store
 
   schema "stores" do
     field :city, :string
@@ -23,7 +24,7 @@ defmodule Nestedform.Stores.Store do
 
     @doc false
   def update_changeset(%Store{} = store, attrs) do
-    invoice
+    store
     |> cast(attrs, [:name, :state, :city])
     |> validate_required([:name, :state, :city])
     |> cast_assoc(:siteinfo)

@@ -1,7 +1,7 @@
 defmodule Nestedform.Stores.Siteinfo do
   use Ecto.Schema
   import Ecto.Changeset
-
+  alias Nestedform.Stores.Siteinfo
 
   schema "siteinfo" do
     field :acronym, :string
@@ -20,21 +20,21 @@ defmodule Nestedform.Stores.Siteinfo do
   def changeset(%Siteinfo{} = siteinfo, attrs) do
     siteinfo
     |> cast(attrs, [:store_number, :acronym, :sales_contact, :service_tech, :facilities_manager, :street_address, :zip])
-    |> validate_required([:store_number, :acronym, :sales_contact, :service_tech, :facilities_manager, :street_address, :zip])
+    |> validate_required([:store_number])
   end
 
   @doc false
   def update_changeset(%Siteinfo{store_id: nil}, attrs, store) do
     Ecto.build_assoc(store, :siteinfo)
     |> cast(attrs, [:store_number, :acronym, :sales_contact, :service_tech, :facilities_manager, :street_address, :zip, :store_id])
-    |> validate_required([:store_number, :acronym, :sales_contact, :service_tech, :facilities_manager, :street_address, :zip, :store_id])
+    |> validate_required([:store_number, :store_id])
   end
 
   @doc false
-  def update_changeset(%Siteinfo{} = siteinfo, attrs, _invoice) do
-    detail
+  def update_changeset(%Siteinfo{} = siteinfo, attrs, _store) do
+    siteinfo
     |> cast(attrs, [:store_number, :acronym, :sales_contact, :service_tech, :facilities_manager, :street_address, :zip, :delete])
-    |> validate_required([:store_number, :acronym, :sales_contact, :service_tech, :facilities_manager, :street_address, :zip, :store_id])
+    |> validate_required([:store_number, :store_id])
     |> mark_for_delete()
   end
 

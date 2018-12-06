@@ -17,8 +17,8 @@
   <%= text_input f, :city %>
   <%= error_tag f, :city %>
 
-  <%= inputs_for f, :siteinfo, fn s -> %>
-      <%= render "_siteinfo.html", s: s %>
+  <%= inputs_for f, :siteinfo, fn if -> %>
+      <%= render "_siteinfo.html", if: if %>
   <% end %>
   </div>
 

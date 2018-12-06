@@ -1,31 +1,38 @@
 <tr>
   <td>
-    <%= text_input @d, :store_number, class: "form-control" %>
-    <%= error_tag @d, :store_number %>
+    <%= label @if, :store_number, "Store Number", class: "control-label"%>
+    <%= text_input @if, :store_number, class: "form-control" %>
+    <%= error_tag @if, :store_number %>
   </td>
   <td>
-    <%= text_input @d, :acronym, class: "form-control" %>
-    <%= error_tag @d, :acronym %>
+    <%= label @if, :acronym, "Acronym", class: "control-label"%>
+    <%= text_input @if, :acronym, class: "form-control" %>
+    <%= error_tag @if, :acronym %>
   </td>
   <td>
-    <%= text_input @d, :sales_contact, class: "form-control" %>
-    <%= error_tag @d, :sales_contact %>
+    <%= label @if, :sales_contact, "Sales Contact", class: "control-label"%>
+    <%= text_input @if, :sales_contact, class: "form-control" %>
+    <%= error_tag @if, :sales_contact %>
   </td>
   <td>
-    <%= text_input @d, :service_tech, class: "form-control" %>
-    <%= error_tag @d, :service_tech %>
+    <%= label @if, :service_tech, "Service Tech", class: "control-label"%>
+    <%= text_input @if, :service_tech, class: "form-control" %>
+    <%= error_tag @if, :service_tech %>
   </td>
   <td>
-    <%= text_input @d, :facilities_manager, class: "form-control" %>
-    <%= error_tag @d, :facilities_manager %>
+    <%= label @if, :facilities_manager, "Facilities Manager", class: "control-label"%>
+    <%= text_input @if, :facilities_manager, class: "form-control" %>
+    <%= error_tag @if, :facilities_manager %>
   </td>
   <td>
-    <%= text_input @d, :street_address, class: "form-control" %>
-    <%= error_tag @d, :street_address %>
+    <%= label @if, :street_address, "Street Address", class: "control-label"%>
+    <%= text_input @if, :street_address, class: "form-control" %>
+    <%= error_tag @if, :street_address %>
   </td>
   <td>
-    <%= text_input @d, :zip, class: "form-control" %>
-    <%= error_tag @d, :zip %>
+    <%= label @if, :zip, "Zip Code", class: "control-label"%>
+    <%= text_input @if, :zip, class: "form-control" %>
+    <%= error_tag @if, :zip %>
   </td>
  
 </tr>

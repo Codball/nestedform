@@ -10,7 +10,7 @@ defmodule NestedformWeb.StoreController do
   end
 
   def new(conn, _params) do
-    changeset = Stores.change_store(%Store{siteinfo: [%Siteinfo{}]})
+    changeset = Stores.change_store(%Store{siteinfo: %Siteinfo{}})
     render(conn, "new.html", changeset: changeset)
   end
 

@@ -37,23 +37,6 @@ defmodule Nestedform.Stores do
   """
   def get_store!(id), do: Repo.get!(Store, id) |> Repo.preload(:siteinfo)
 
-  @doc """
-  Creates a store.
-
-  ## Examples
-
-      iex> create_store(%{field: value})
-      {:ok, %Store{}}
-
-      iex> create_store(%{field: bad_value})
-      {:error, %Ecto.Changeset{}}
-
-  """
-  #def create_store(attrs \\ %{}) do
-  #  %Store{}
-  #  |> Store.changeset(attrs)
-  #  |> Repo.insert()
-  #end
 
   @doc """
   Updates a store.
