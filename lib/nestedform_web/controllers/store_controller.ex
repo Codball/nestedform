@@ -1,6 +1,6 @@
 defmodule NestedformWeb.StoreController do
   use NestedformWeb, :controller
-
+  alias Nestedform.Repo
   alias Nestedform.Stores
   alias Nestedform.Stores.{Store,Siteinfo}
 
@@ -28,7 +28,8 @@ defmodule NestedformWeb.StoreController do
 
   def show(conn, %{"id" => id}) do
     store = Stores.get_store!(id)
-    render(conn, "show.html", store: store)
+    siteinfo = Stores.get_siteinfo!(id)
+    render(conn, "show.html", store: store, siteinfo: siteinfo)
   end
 
   def edit(conn, %{"id" => id}) do

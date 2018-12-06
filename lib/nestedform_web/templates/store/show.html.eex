@@ -19,5 +19,36 @@
 
 </ul>
 
+<ul>
+  <li>
+  <strong>Store Number:</strong>
+    <%= @siteinfo.store_number %>
+  </li>
+  <li>
+  <strong>Acronym:</strong>
+    <%= @siteinfo.acronym %>
+  </li>
+  <li>
+  <strong>Sales Contact:</strong>
+    <%= @siteinfo.sales_contact %>
+  </li>
+  <li>
+  <strong>Service Tech:</strong>
+    <%= @siteinfo.service_tech %>
+  </li>
+  <li>
+  <strong>Facilities Manager:</strong>
+    <%= @siteinfo.facilities_manager %>
+  </li>
+  <li>
+  <strong>Street Address:</strong>
+    <%= @siteinfo.street_address %>
+  </li>
+  <li>
+  <strong>Zip Code:</strong>
+    <%= @siteinfo.zip %>
+  </li>
+</ul>
+
 <span><%= link "Edit", to: Routes.store_path(@conn, :edit, @store) %></span>
 <span><%= link "Back", to: Routes.store_path(@conn, :index) %></span>
