@@ -103,37 +103,10 @@ defmodule Nestedform.Stores do
   end
 
 
-  def add_records(%{store: store}, attrs) do
-    records =
-      Enum.map(attrs["siteinfo"], fn {_, d} ->
-        Map.put(d, "store_id", store.id)
-      end)
-      |> Enum.map(
-        &Nestedform.Stores.Siteinfo.changeset(%Nestedform.Stores.Siteinfo{}, &1)
-      )
-      |> Enum.map(fn ch -> {:ok, _d} = Repo.insert(ch) end)
-
-    {:ok, records}
-  end
-
-  def save_store(store_changeset, attrs) do
-    Multi.new()
-    |> Multi.insert(:store, store_changeset)
-    |> Multi.run(:add_siteinfo, &add_records(&1, attrs))
-  end
-
   def create_store(attrs \\ %{}) do
-    store_changeset =
-      %Store{}
-      |> Store.changeset(attrs)
-
-    case Repo.transaction(save_store(store_changeset, attrs)) do
-      {:ok, %{store: store, add_siteinfo: _siteinfo}} ->
-        {:ok, store}
-
-      {:error, _failed_operation, _failed_value, _changes_so_far} ->
-        {:error, store_changeset}
-    end
+    %Store{}
+    |> Store.changeset(attrs)
+    |> Repo.insert()
   end
 
 

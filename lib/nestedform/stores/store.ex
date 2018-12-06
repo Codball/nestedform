@@ -26,9 +26,6 @@ defmodule Nestedform.Stores.Store do
     invoice
     |> cast(attrs, [:name, :state, :city])
     |> validate_required([:name, :state, :city])
-    |> cast_assoc(
-      :siteinfo,
-      with: &Nestedform.Stores.Siteinfo.update_changeset(&1, &2, store)
-    )
+    |> cast_assoc(:siteinfo)
   end
 end
