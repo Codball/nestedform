@@ -8,8 +8,8 @@ defmodule Nestedform.Stores.Store do
     field :city, :string
     field :name, :string
     field :state, :string
-    has_one :siteinfo, Siteinfo
-    has_one :internetconnections, InternetConnection
+    has_one :siteinfo, Siteinfo, on_delete: :delete_all
+    has_one :internetconnections, InternetConnection, on_delete: :delete_all
 
     timestamps()
   end

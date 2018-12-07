@@ -27,10 +27,8 @@ defmodule NestedformWeb.StoreController do
   end
 
   def show(conn, %{"id" => id}) do
-    store = Stores.get_store!(id)
-    siteinfo = Stores.get_siteinfo!(id)
-    internetconnection = Stores.get_internet_connection!(id)
-    render(conn, "show.html", store: store, siteinfo: siteinfo, internetconnection: internetconnection)
+    store = Repo.get!(Store, id) |> Repo.preload([:siteinfo, :internetconnections])
+    render(conn, "show.html", store: store)
   end
 
   def edit(conn, %{"id" => id}) do

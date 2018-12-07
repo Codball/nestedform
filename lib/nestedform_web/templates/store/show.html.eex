@@ -22,94 +22,94 @@
 <ul>
   <li>
   <strong>Store Number:</strong>
-    <%= @siteinfo.store_number %>
+    <%= @store.siteinfo.store_number %>
   </li>
   <li>
   <strong>Acronym:</strong>
-    <%= @siteinfo.acronym %>
+    <%= @store.siteinfo.acronym %>
   </li>
   <li>
   <strong>Sales Contact:</strong>
-    <%= @siteinfo.sales_contact %>
+    <%= @store.siteinfo.sales_contact %>
   </li>
   <li>
   <strong>Service Tech:</strong>
-    <%= @siteinfo.service_tech %>
+    <%= @store.siteinfo.service_tech %>
   </li>
   <li>
   <strong>Facilities Manager:</strong>
-    <%= @siteinfo.facilities_manager %>
+    <%= @store.siteinfo.facilities_manager %>
   </li>
   <li>
   <strong>Street Address:</strong>
-    <%= @siteinfo.street_address %>
+    <%= @store.siteinfo.street_address %>
   </li>
   <li>
   <strong>Zip Code:</strong>
-    <%= @siteinfo.zip %>
+    <%= @store.siteinfo.zip %>
   </li>
 </ul>
 
 <ul>
   <li>
   <strong>Internet Connection Type:</strong>
-    <%= @internetconnections.int_conn_type %>
+    <%= @store.internetconnections.int_conn_type %>
   </li>
   <li>
   <strong>ISP:</strong>
-    <%= @internetconnections.isp %>
+    <%= @store.internetconnections.isp %>
   </li>
   <li>
   <strong>ISP Account #:</strong>
-    <%= @internetconnections.isp_account %>
+    <%= @store.internetconnections.isp_account %>
   </li>
   <li>
   <strong>ISP Support #:</strong>
-    <%= @internetconnections.isp_support %>
+    <%= @store.internetconnections.isp_support %>
   </li>
   <li>
   <strong>Store Phone #:</strong>
-    <%= @internetconnections.store_phone %>
+    <%= @store.internetconnections.store_phone %>
   </li>
   <li>
   <strong>Network Type:</strong>
-    <%= @internetconnections.network_type %>
+    <%= @store.internetconnections.network_type %>
   </li>
   <li>
   <strong>Network Speed:</strong>
-    <%= @internetconnections.network_speed %>
+    <%= @store.internetconnections.network_speed %>
   </li>
    <li>
   <strong>Account Username:</strong>
-    <%= @internetconnections.account_username %>
+    <%= @store.internetconnections.account_username %>
   </li>
    <li>
   <strong>Account Password:</strong>
-    <%= @internetconnections.account_password %>
+    <%= @store.internetconnections.account_password %>
   </li>
    <li>
   <strong>Account Pin #:</strong>
-    <%= @internetconnections.account_pin %>
+    <%= @store.internetconnections.account_pin %>
   </li>
    <li>
   <strong>Static IP Address:</strong>
-    <%= @internetconnections.static_ip %>
+    <%= @store.internetconnections.static_ip %>
   </li>
   <li>
-  <strong>Static IP Address:</strong>
-    <%= @internetconnections.static_subnet_mask %>
+  <strong>Static Subnet Mask:</strong>
+    <%= @store.internetconnections.static_subnet_mask %>
   </li>
   <li>
-  <strong>Static IP Address:</strong>
-    <%= @internetconnections.static_gateway %>
+  <strong>Static Gateway:</strong>
+    <%= @store.internetconnections.static_gateway %>
   </li>
   <li>
-  <strong>Static IP Address:</strong>
-    <%= @internetconnections.static_dns_one %>
+  <strong>Static DNS #1:</strong>
+    <%= @store.internetconnections.static_dns_one %>
   </li>
   <li>
-  <strong>Static IP Address:</strong>
-    <%= @internetconnections.static_dns_two %>
+  <strong>Static DNS #2:</strong>
+    <%= @store.internetconnections.static_dns_two %>
   </li>
 
 </ul>
