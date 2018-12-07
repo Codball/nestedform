@@ -1,0 +1,78 @@
+<tr>
+  <td>
+    <%= label @cf, :int_conn_type, "Internet Connection Type", class: "control-label"%>
+    <%= text_input @cf, :int_conn_type, class: "form-control" %>
+    <%= error_tag @cf, :int_conn_type %>
+  </td>
+  <td>
+    <%= label @cf, :isp, "ISP", class: "control-label"%>
+    <%= text_input @cf, :isp, class: "form-control" %>
+    <%= error_tag @cf, :isp %>
+  </td>
+  <td>
+    <%= label @cf, :isp_account, "ISP Account Number", class: "control-label"%>
+    <%= text_input @cf, :isp_account, class: "form-control" %>
+    <%= error_tag @cf, :isp_account %>
+  </td>
+  <td>
+    <%= label @cf, :isp_support, "ISP Support Number", class: "control-label"%>
+    <%= text_input @cf, :isp_support, class: "form-control" %>
+    <%= error_tag @cf, :isp_support %>
+  </td>
+  <td>
+    <%= label @cf, :store_phone, "Store Phone Number", class: "control-label"%>
+    <%= text_input @cf, :store_phone, class: "form-control" %>
+    <%= error_tag @cf, :store_phone %>
+  </td>
+  <td>
+    <%= label @cf, :network_type, "Network Type", class: "control-label"%>
+    <%= text_input @cf, :network_type, class: "form-control" %>
+    <%= error_tag @cf, :network_type %>
+  </td>
+  <td>
+    <%= label @cf, :network_speed, "Network Speed", class: "control-label"%>
+    <%= text_input @cf, :network_speed, class: "form-control" %>
+    <%= error_tag @cf, :network_speed %>
+  </td>
+  <td>
+    <%= label @cf, :account_username, "Account Username", class: "control-label"%>
+    <%= text_input @cf, :account_username, class: "form-control" %>
+    <%= error_tag @cf, :account_username %>
+  </td>
+  <td>
+    <%= label @cf, :account_password, "Account Password", class: "control-label"%>
+    <%= text_input @cf, :account_password, class: "form-control" %>
+    <%= error_tag @cf, :account_password %>
+  </td>
+  <td>
+    <%= label @cf, :account_pin, "Account Pin Code", class: "control-label"%>
+    <%= text_input @cf, :account_pin, class: "form-control" %>
+    <%= error_tag @cf, :account_pin %>
+  </td>
+  <td>
+    <%= label @cf, :static_ip, "Static IP Address", class: "control-label"%>
+    <%= text_input @cf, :static_ip, class: "form-control" %>
+    <%= error_tag @cf, :static_ip %>
+  </td>
+  <td>
+    <%= label @cf, :static_subnet_mask, "Static Subnet Mask", class: "control-label"%>
+    <%= text_input @cf, :static_subnet_mask, class: "form-control" %>
+    <%= error_tag @cf, :static_subnet_mask %>
+  </td>
+  <td>
+    <%= label @cf, :static_gateway, "Static Gateway", class: "control-label"%>
+    <%= text_input @cf, :static_gateway, class: "form-control" %>
+    <%= error_tag @cf, :static_gateway %>
+  </td>
+  <td>
+    <%= label @cf, :static_dns_one, "Static DNS #1", class: "control-label"%>
+    <%= text_input @cf, :static_dns_one, class: "form-control" %>
+    <%= error_tag @cf, :static_dns_one %>
+  </td>
+  <td>
+    <%= label @cf, :static_dns_two, "Static DNS #2", class: "control-label"%>
+    <%= text_input @cf, :static_dns_two, class: "form-control" %>
+    <%= error_tag @cf, :static_dns_two %>
+  </td>
+ 
+</tr>

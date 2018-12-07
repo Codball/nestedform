@@ -50,5 +50,69 @@
   </li>
 </ul>
 
+<ul>
+  <li>
+  <strong>Internet Connection Type:</strong>
+    <%= @internetconnections.int_conn_type %>
+  </li>
+  <li>
+  <strong>ISP:</strong>
+    <%= @internetconnections.isp %>
+  </li>
+  <li>
+  <strong>ISP Account #:</strong>
+    <%= @internetconnections.isp_account %>
+  </li>
+  <li>
+  <strong>ISP Support #:</strong>
+    <%= @internetconnections.isp_support %>
+  </li>
+  <li>
+  <strong>Store Phone #:</strong>
+    <%= @internetconnections.store_phone %>
+  </li>
+  <li>
+  <strong>Network Type:</strong>
+    <%= @internetconnections.network_type %>
+  </li>
+  <li>
+  <strong>Network Speed:</strong>
+    <%= @internetconnections.network_speed %>
+  </li>
+   <li>
+  <strong>Account Username:</strong>
+    <%= @internetconnections.account_username %>
+  </li>
+   <li>
+  <strong>Account Password:</strong>
+    <%= @internetconnections.account_password %>
+  </li>
+   <li>
+  <strong>Account Pin #:</strong>
+    <%= @internetconnections.account_pin %>
+  </li>
+   <li>
+  <strong>Static IP Address:</strong>
+    <%= @internetconnections.static_ip %>
+  </li>
+  <li>
+  <strong>Static IP Address:</strong>
+    <%= @internetconnections.static_subnet_mask %>
+  </li>
+  <li>
+  <strong>Static IP Address:</strong>
+    <%= @internetconnections.static_gateway %>
+  </li>
+  <li>
+  <strong>Static IP Address:</strong>
+    <%= @internetconnections.static_dns_one %>
+  </li>
+  <li>
+  <strong>Static IP Address:</strong>
+    <%= @internetconnections.static_dns_two %>
+  </li>
+
+</ul>
+
 <span><%= link "Edit", to: Routes.store_path(@conn, :edit, @store) %></span>
 <span><%= link "Back", to: Routes.store_path(@conn, :index) %></span>

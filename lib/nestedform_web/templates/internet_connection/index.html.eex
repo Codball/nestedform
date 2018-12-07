@@ -1,0 +1,54 @@
+<h1>Listing Internetconnections</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Int conn type</th>
+      <th>Isp</th>
+      <th>Isp account</th>
+      <th>Isp support</th>
+      <th>Store phone</th>
+      <th>Network type</th>
+      <th>Network speed</th>
+      <th>Account username</th>
+      <th>Account password</th>
+      <th>Account pin</th>
+      <th>Static ip</th>
+      <th>Static subnet mask</th>
+      <th>Static gateway</th>
+      <th>Static dns one</th>
+      <th>Static dns two</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for internet_connection <- @internetconnections do %>
+    <tr>
+      <td><%= internet_connection.int_conn_type %></td>
+      <td><%= internet_connection.isp %></td>
+      <td><%= internet_connection.isp_account %></td>
+      <td><%= internet_connection.isp_support %></td>
+      <td><%= internet_connection.store_phone %></td>
+      <td><%= internet_connection.network_type %></td>
+      <td><%= internet_connection.network_speed %></td>
+      <td><%= internet_connection.account_username %></td>
+      <td><%= internet_connection.account_password %></td>
+      <td><%= internet_connection.account_pin %></td>
+      <td><%= internet_connection.static_ip %></td>
+      <td><%= internet_connection.static_subnet_mask %></td>
+      <td><%= internet_connection.static_gateway %></td>
+      <td><%= internet_connection.static_dns_one %></td>
+      <td><%= internet_connection.static_dns_two %></td>
+
+      <td>
+        <%= link "Show", to: Routes.internet_connection_path(@conn, :show, internet_connection) %>
+        <%= link "Edit", to: Routes.internet_connection_path(@conn, :edit, internet_connection) %>
+        <%= link "Delete", to: Routes.internet_connection_path(@conn, :delete, internet_connection), method: :delete, data: [confirm: "Are you sure?"] %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Internet connection", to: Routes.internet_connection_path(@conn, :new) %></span>

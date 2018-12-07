@@ -1,7 +1,7 @@
 defmodule Nestedform.Stores.Siteinfo do
   use Ecto.Schema
   import Ecto.Changeset
-  alias Nestedform.Stores.Siteinfo
+  alias Nestedform.Stores.{Siteinfo,Store}
 
   schema "siteinfo" do
     field :acronym, :string
@@ -11,7 +11,8 @@ defmodule Nestedform.Stores.Siteinfo do
     field :store_number, :string
     field :street_address, :string
     field :zip, :string
-    belongs_to :store, Nestedform.Stores.Store
+    field :delete, :boolean, virtual: true
+    belongs_to :store, Store
 
     timestamps()
   end

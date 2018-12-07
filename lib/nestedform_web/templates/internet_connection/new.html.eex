@@ -1,0 +1,5 @@
+<h1>New Internet connection</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.internet_connection_path(@conn, :create)) %>
+
+<span><%= link "Back", to: Routes.internet_connection_path(@conn, :index) %></span>

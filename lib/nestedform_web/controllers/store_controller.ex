@@ -2,7 +2,7 @@ defmodule NestedformWeb.StoreController do
   use NestedformWeb, :controller
   alias Nestedform.Repo
   alias Nestedform.Stores
-  alias Nestedform.Stores.{Store,Siteinfo}
+  alias Nestedform.Stores.{Store,Siteinfo,InternetConnection}
 
   def index(conn, _params) do
     stores = Stores.list_stores()
@@ -10,7 +10,7 @@ defmodule NestedformWeb.StoreController do
   end
 
   def new(conn, _params) do
-    changeset = Stores.change_store(%Store{siteinfo: %Siteinfo{}})
+    changeset = Stores.change_store(%Store{siteinfo: %Siteinfo{}, internetconnections: %InternetConnection{}})
     render(conn, "new.html", changeset: changeset)
   end
 
@@ -29,7 +29,8 @@ defmodule NestedformWeb.StoreController do
   def show(conn, %{"id" => id}) do
     store = Stores.get_store!(id)
     siteinfo = Stores.get_siteinfo!(id)
-    render(conn, "show.html", store: store, siteinfo: siteinfo)
+    internetconnection = Stores.get_internet_connection!(id)
+    render(conn, "show.html", store: store, siteinfo: siteinfo, internetconnection: internetconnection)
   end
 
   def edit(conn, %{"id" => id}) do

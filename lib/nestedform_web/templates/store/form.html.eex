@@ -20,6 +20,10 @@
   <%= inputs_for f, :siteinfo, fn if -> %>
       <%= render "_siteinfo.html", if: if %>
   <% end %>
+
+  <%= inputs_for f, :internetconnections, fn cf -> %>
+      <%= render "_InternetConnection.html", cf: cf %>
+  <% end %>
   </div>
 
   <div>

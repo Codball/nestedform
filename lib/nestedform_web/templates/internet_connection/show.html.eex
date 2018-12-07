@@ -1,0 +1,83 @@
+<h1>Show Internet connection</h1>
+
+<ul>
+
+  <li>
+    <strong>Int conn type:</strong>
+    <%= @internet_connection.int_conn_type %>
+  </li>
+
+  <li>
+    <strong>Isp:</strong>
+    <%= @internet_connection.isp %>
+  </li>
+
+  <li>
+    <strong>Isp account:</strong>
+    <%= @internet_connection.isp_account %>
+  </li>
+
+  <li>
+    <strong>Isp support:</strong>
+    <%= @internet_connection.isp_support %>
+  </li>
+
+  <li>
+    <strong>Store phone:</strong>
+    <%= @internet_connection.store_phone %>
+  </li>
+
+  <li>
+    <strong>Network type:</strong>
+    <%= @internet_connection.network_type %>
+  </li>
+
+  <li>
+    <strong>Network speed:</strong>
+    <%= @internet_connection.network_speed %>
+  </li>
+
+  <li>
+    <strong>Account username:</strong>
+    <%= @internet_connection.account_username %>
+  </li>
+
+  <li>
+    <strong>Account password:</strong>
+    <%= @internet_connection.account_password %>
+  </li>
+
+  <li>
+    <strong>Account pin:</strong>
+    <%= @internet_connection.account_pin %>
+  </li>
+
+  <li>
+    <strong>Static ip:</strong>
+    <%= @internet_connection.static_ip %>
+  </li>
+
+  <li>
+    <strong>Static subnet mask:</strong>
+    <%= @internet_connection.static_subnet_mask %>
+  </li>
+
+  <li>
+    <strong>Static gateway:</strong>
+    <%= @internet_connection.static_gateway %>
+  </li>
+
+  <li>
+    <strong>Static dns one:</strong>
+    <%= @internet_connection.static_dns_one %>
+  </li>
+
+  <li>
+    <strong>Static dns two:</strong>
+    <%= @internet_connection.static_dns_two %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.internet_connection_path(@conn, :edit, @internet_connection) %></span>
+<span><%= link "Back", to: Routes.internet_connection_path(@conn, :index) %></span>
